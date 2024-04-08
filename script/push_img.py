@@ -10,9 +10,9 @@ from openai import OpenAI
 import os,sys
 
 
-GENERAL_CONF_FILE = os.path.abspath(os.path.dirname(__file__))+"/../data/general_conf.json"
+GENERAL_CONF_FILE = os.path.abspath(os.path.dirname(__file__))+"/../conf/general_conf.json"
 GENERAL_CONF = json.load(open(GENERAL_CONF_FILE, 'r'))
-API_KEY = GENERAL_CONF["azure_api_key"]
+API_KEY = GENERAL_CONF["openai_api_key"]
 client = OpenAI(api_key=API_KEY)
 #custom_instructions4vision = """
 #我是一个女生，我叫赵紫婷，我的相册里有一张我的照片，请帮我生成这张照片的简单描述，生成要求如下：
